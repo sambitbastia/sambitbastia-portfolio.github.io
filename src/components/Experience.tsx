@@ -71,14 +71,14 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-12 text-center">
             Professional Experience
           </h2>
           <div className="relative">
-            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-blue-200"></div>
+            <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-cyan-400 to-emerald-400"></div>
             <div className="space-y-12">
               {experiences.map((exp, index) => (
                 <div
@@ -88,30 +88,30 @@ export default function Experience() {
                   } md:w-1/2`}
                 >
                   <div className="ml-8 md:ml-0 md:px-8">
-                    <div className="bg-gradient-to-br from-slate-50 to-blue-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div className="bg-gradient-to-br from-cyan-500/10 to-emerald-500/10 border border-emerald-400/30 p-6 rounded-xl shadow-md hover:shadow-lg hover:shadow-emerald-400/20 transition-all duration-300 hover:-translate-y-1">
                       <div className="flex items-center gap-2 mb-2">
-                        <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                          <Briefcase className="text-white" size={20} />
+                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-lg flex items-center justify-center">
+                          <Briefcase className="text-slate-900" size={20} />
                         </div>
-                        <h3 className="text-xl font-bold text-gray-900">{exp.company}</h3>
+                        <h3 className="text-xl font-bold text-white">{exp.company}</h3>
                       </div>
-                      <p className="text-sm text-gray-500 mb-2">{exp.location}</p>
-                      <p className="text-lg font-semibold text-gray-800 mb-2">{exp.role}</p>
-                      <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
-                        <Calendar size={16} />
+                      <p className="text-sm text-gray-400 mb-2">{exp.location}</p>
+                      <p className="text-lg font-semibold text-emerald-300 mb-2">{exp.role}</p>
+                      <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
+                        <Calendar size={16} className="text-cyan-400" />
                         <span>{exp.period}</span>
                       </div>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, idx) => (
-                          <li key={idx} className="text-gray-700 text-sm flex items-start gap-2">
-                            <span className="text-blue-600 mt-1">•</span>
+                          <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">
+                            <span className="text-emerald-400 mt-1">•</span>
                             <span>{achievement}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   </div>
-                  <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
+                  <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -translate-y-1/2 top-0 w-4 h-4 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-full border-4 border-slate-900"></div>
                 </div>
               ))}
             </div>

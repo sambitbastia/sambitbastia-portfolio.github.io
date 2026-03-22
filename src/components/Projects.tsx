@@ -47,27 +47,31 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-6">
+    <section id="projects" className="py-20 bg-slate-800 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute -top-1/2 -left-1/2 w-96 h-96 bg-cyan-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-1/2 -right-1/2 w-96 h-96 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent mb-12 text-center">
             Key Projects & Initiatives
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 flex flex-col"
+                className="bg-gradient-to-br from-cyan-500/10 to-emerald-500/10 border border-emerald-400/30 p-6 rounded-xl hover:border-emerald-400 hover:shadow-lg hover:shadow-emerald-400/20 transition-all duration-300 hover:-translate-y-2 flex flex-col group"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <Rocket className="text-white" size={20} />
+                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Rocket className="text-slate-900" size={20} />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 flex-1">
+                  <h3 className="text-lg font-bold text-white flex-1">
                     {project.title}
                   </h3>
                 </div>
-                <p className="text-gray-700 text-sm mb-4 flex-grow">
+                <p className="text-gray-300 text-sm mb-4 flex-grow">
                   {project.description}
                 </p>
                 <div className="mb-4">
@@ -75,17 +79,17 @@ export default function Projects() {
                     {project.technologies.map((tech, idx) => (
                       <span
                         key={idx}
-                        className="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded-full"
+                        className="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs rounded-full border border-emerald-400/30"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
-                <div className="pt-4 border-t border-gray-100">
+                <div className="pt-4 border-t border-emerald-400/30">
                   <div className="flex items-start gap-2">
-                    <ExternalLink className="text-blue-600 flex-shrink-0 mt-0.5" size={14} />
-                    <p className="text-xs font-medium text-gray-600">{project.impact}</p>
+                    <ExternalLink className="text-cyan-400 flex-shrink-0 mt-0.5" size={14} />
+                    <p className="text-xs font-medium text-gray-400">{project.impact}</p>
                   </div>
                 </div>
               </div>
