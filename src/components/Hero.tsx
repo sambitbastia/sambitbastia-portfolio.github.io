@@ -21,7 +21,8 @@ export default function Hero() {
               <div className="relative">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-cyan-400 to-emerald-400 rounded-2xl blur opacity-75"></div>
                 <img
-                  src="/Gemini_Generated_Image_38fejq38fejq38fe.png"
+                  //src="/Gemini_Generated_Image_38fejq38fejq38fe.png"
+                  src={`${import.meta.env.BASE_URL}Gemini_Generated_Image_38fejq38fejq38fe.png`}
                   alt="Sambit Kumar Bastia"
                   className="relative w-full h-auto rounded-2xl shadow-2xl object-cover"
                 />
